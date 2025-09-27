@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Article - NewsHub</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <h1><i class="fas fa-newspaper"></i> NewsHub</h1>
+                </div>
+                <nav class="nav">
+                    <ul class="nav-list">
+                        <li><a href="index.html" class="nav-link">Home</a></li>
+                        <li><a href="category.html?cat=sports" class="nav-link">Sports</a></li>
+                        <li><a href="category.html?cat=tech" class="nav-link">Tech</a></li>
+                        <li><a href="category.html?cat=politics" class="nav-link">Politics</a></li>
+                        <li><a href="category.html?cat=entertainment" class="nav-link">Entertainment</a></li>
+                        <li><a href="category.html?cat=business" class="nav-link">Business</a></li>
+                    </ul>
+                </nav>
+                <div class="header-actions">
+                    <div class="search-container">
+                        <input type="text" id="searchInput" placeholder="Search news..." class="search-input">
+                        <button class="search-btn"><i class="fas fa-search"></i></button>
+                    </div>
+                    <button class="theme-toggle" id="themeToggle">
+                        <i class="fas fa-moon"></i>
+                    </button>
+                    <button class="login-btn" id="loginBtn">Login</button>
+                </div>
+                <button class="mobile-menu-toggle" id="mobileMenuToggle">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Breaking News Banner -->
+    <div class="breaking-news" id="breakingNews">
+        <div class="container">
+            <div class="breaking-content">
+                <span class="breaking-label">BREAKING</span>
+                <div class="breaking-ticker" id="breakingTicker">
+                    <span>Major breakthrough in renewable energy technology announced today...</span>
+                    <span>Stock markets reach new all-time highs amid economic optimism...</span>
+                    <span>International space mission successfully launches from Cape Canaveral...</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <main class="main">
+        <div class="container">
+            <!-- Article Content -->
+            <article class="article-content">
+                <div class="article-header">
+                    <div class="breadcrumb">
+                        <a href="index.html">Home</a>
+                        <span>/</span>
+                        <a href="#" id="articleCategoryLink">Category</a>
+                        <span>/</span>
+                        <span id="articleTitle">Article</span>
+                    </div>
+                    <div class="article-meta">
+                        <span class="category" id="articleCategory">Technology</span>
+                        <span class="date" id="articleDate"></span>
+                        <span class="read-time" id="readTime">5 min read</span>
+                    </div>
+                    <h1 class="article-title" id="articleTitleText">Revolutionary AI Technology Transforms Healthcare Industry</h1>
+                    <div class="article-subtitle" id="articleSubtitle">A groundbreaking artificial intelligence system has been developed that can diagnose diseases with 99% accuracy</div>
+                    <div class="article-author">
+                        <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=150&q=80" alt="Author" class="author-image">
+                        <div class="author-info">
+                            <span class="author-name">Dr. Sarah Johnson</span>
+                            <span class="author-title">Medical Technology Correspondent</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="article-image">
+                    <img src="https://images.unsplash.com/photo-1504711434969-e33886168f5c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" alt="Article Image" id="articleImage">
+                    <div class="image-caption" id="imageCaption">AI-powered diagnostic system in action at a major hospital</div>
+                </div>
+
+                <div class="article-body" id="articleBody">
+                    <p>In a groundbreaking development that could revolutionize healthcare worldwide, researchers have unveiled an artificial intelligence system capable of diagnosing diseases with unprecedented accuracy. The technology, developed by a team of medical professionals and computer scientists, has shown remarkable results in preliminary testing.</p>
+                    
+                    <p>The AI system, dubbed "MediScan Pro," utilizes advanced machine learning algorithms to analyze medical images, patient symptoms, and laboratory results. In controlled studies, it has demonstrated a 99.2% accuracy rate in diagnosing common conditions, significantly outperforming traditional diagnostic methods.</p>
+
+                    <h2>How It Works</h2>
+                    <p>The system processes vast amounts of medical data in real-time, learning from millions of case studies and medical records. It can identify patterns and anomalies that might be missed by human doctors, particularly in early-stage diseases where symptoms are subtle.</p>
+
+                    <blockquote>
+                        "This represents a paradigm shift in medical diagnosis. We're not replacing doctors, but augmenting their capabilities with technology that can process information at a scale and speed that's simply impossible for humans."
+                        <cite>— Dr. Michael Chen, Lead Researcher</cite>
+                    </blockquote>
+
+                    <h2>Impact on Healthcare</h2>
+                    <p>The implications of this technology are far-reaching. Hospitals implementing MediScan Pro have reported:</p>
+                    <ul>
+                        <li>40% reduction in misdiagnosis rates</li>
+                        <li>60% faster diagnosis times</li>
+                        <li>Significant cost savings in medical testing</li>
+                        <li>Improved patient outcomes and satisfaction</li>
+                    </ul>
+
+                    <p>Dr. Sarah Johnson, a leading medical technology correspondent, notes that "this development comes at a crucial time when healthcare systems worldwide are under pressure to provide better care with limited resources."</p>
+
+                    <h2>Future Applications</h2>
+                    <p>The research team is already working on expanding the system's capabilities to include:</p>
+                    <ul>
+                        <li>Predictive analysis for disease prevention</li>
+                        <li>Personalized treatment recommendations</li>
+                        <li>Integration with wearable health devices</li>
+                        <li>Real-time monitoring of chronic conditions</li>
+                    </ul>
+
+                    <p>While the technology shows immense promise, experts emphasize the importance of maintaining human oversight and ensuring that AI serves as a tool to enhance, not replace, medical expertise.</p>
+                </div>
+
+                <div class="article-actions">
+                    <div class="social-share">
+                        <span>Share this article:</span>
+                        <a href="#" class="share-btn facebook"><i class="fab fa-facebook"></i></a>
+                        <a href="#" class="share-btn twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="share-btn linkedin"><i class="fab fa-linkedin"></i></a>
+                        <a href="#" class="share-btn whatsapp"><i class="fab fa-whatsapp"></i></a>
+                    </div>
+                    <div class="article-tags">
+                        <span>Tags:</span>
+                        <a href="#" class="tag">AI</a>
+                        <a href="#" class="tag">Healthcare</a>
+                        <a href="#" class="tag">Technology</a>
+                        <a href="#" class="tag">Medical</a>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Related Articles -->
+            <section class="related-articles">
+                <h3>Related Articles</h3>
+                <div class="related-grid" id="relatedGrid">
+                    <!-- Related articles will be dynamically generated -->
+                </div>
+            </section>
+
+            <!-- Comments Section -->
+            <section class="comments-section">
+                <h3>Comments (24)</h3>
+                <div class="comment-form">
+                    <textarea placeholder="Share your thoughts..." id="commentText"></textarea>
+                    <button class="comment-submit-btn">Post Comment</button>
+                </div>
+                <div class="comments-list" id="commentsList">
+                    <!-- Comments will be dynamically generated -->
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>NewsHub</h4>
+                    <p>Your trusted source for breaking news and in-depth analysis.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>Categories</h4>
+                    <ul>
+                        <li><a href="category.html?cat=sports">Sports</a></li>
+                        <li><a href="category.html?cat=tech">Technology</a></li>
+                        <li><a href="category.html?cat=politics">Politics</a></li>
+                        <li><a href="category.html?cat=entertainment">Entertainment</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Company</h4>
+                    <ul>
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">Contact</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms of Service</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Newsletter</h4>
+                    <p>Subscribe to get daily news updates</p>
+                    <form class="footer-newsletter">
+                        <input type="email" placeholder="Your email">
+                        <button type="submit">Subscribe</button>
+                    </form>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 NewsHub. All rights reserved.</p>
+                <p id="currentTime"></p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="index.js"></script>
+</body>
+</html>

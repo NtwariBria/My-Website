@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Category - NewsHub</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <h1><i class="fas fa-newspaper"></i> NewsHub</h1>
+                </div>
+                <nav class="nav">
+                    <ul class="nav-list">
+                        <li><a href="index.html" class="nav-link">Home</a></li>
+                        <li><a href="category.html?cat=sports" class="nav-link">Sports</a></li>
+                        <li><a href="category.html?cat=tech" class="nav-link">Tech</a></li>
+                        <li><a href="category.html?cat=politics" class="nav-link">Politics</a></li>
+                        <li><a href="category.html?cat=entertainment" class="nav-link">Entertainment</a></li>
+                        <li><a href="category.html?cat=business" class="nav-link">Business</a></li>
+                    </ul>
+                </nav>
+                <div class="header-actions">
+                    <div class="search-container">
+                        <input type="text" id="searchInput" placeholder="Search news..." class="search-input">
+                        <button class="search-btn"><i class="fas fa-search"></i></button>
+                    </div>
+                    <button class="theme-toggle" id="themeToggle">
+                        <i class="fas fa-moon"></i>
+                    </button>
+                    <button class="login-btn" id="loginBtn">Login</button>
+                </div>
+                <button class="mobile-menu-toggle" id="mobileMenuToggle">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Breaking News Banner -->
+    <div class="breaking-news" id="breakingNews">
+        <div class="container">
+            <div class="breaking-content">
+                <span class="breaking-label">BREAKING</span>
+                <div class="breaking-ticker" id="breakingTicker">
+                    <span>Major breakthrough in renewable energy technology announced today...</span>
+                    <span>Stock markets reach new all-time highs amid economic optimism...</span>
+                    <span>International space mission successfully launches from Cape Canaveral...</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <main class="main">
+        <div class="container">
+            <!-- Category Header -->
+            <section class="category-header">
+                <div class="breadcrumb">
+                    <a href="index.html">Home</a>
+                    <span>/</span>
+                    <span id="categoryName">Category</span>
+                </div>
+                <h1 class="category-title" id="categoryTitle">Category News</h1>
+                <p class="category-description" id="categoryDescription">Stay updated with the latest news in this category</p>
+            </section>
+
+            <!-- Filter and Sort Options -->
+            <section class="filter-section">
+                <div class="filter-controls">
+                    <div class="sort-controls">
+                        <label for="sortSelect">Sort by:</label>
+                        <select id="sortSelect" class="sort-select">
+                            <option value="latest">Latest</option>
+                            <option value="popular">Most Popular</option>
+                            <option value="trending">Trending</option>
+                        </select>
+                    </div>
+                    <div class="view-controls">
+                        <button class="view-btn active" data-view="grid"><i class="fas fa-th"></i></button>
+                        <button class="view-btn" data-view="list"><i class="fas fa-list"></i></button>
+                    </div>
+                </div>
+            </section>
+
+            <!-- News Grid -->
+            <section class="news-section">
+                <div class="news-grid" id="categoryNewsGrid">
+                    <!-- News cards will be dynamically generated -->
+                </div>
+                <div class="loading-spinner" id="loadingSpinner" style="display: none;">
+                    <i class="fas fa-spinner fa-spin"></i>
+                    <p>Loading more news...</p>
+                </div>
+                <button class="load-more-btn" id="loadMoreBtn">Load More News</button>
+            </section>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>NewsHub</h4>
+                    <p>Your trusted source for breaking news and in-depth analysis.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>Categories</h4>
+                    <ul>
+                        <li><a href="category.html?cat=sports">Sports</a></li>
+                        <li><a href="category.html?cat=tech">Technology</a></li>
+                        <li><a href="category.html?cat=politics">Politics</a></li>
+                        <li><a href="category.html?cat=entertainment">Entertainment</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Company</h4>
+                    <ul>
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">Contact</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms of Service</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Newsletter</h4>
+                    <p>Subscribe to get daily news updates</p>
+                    <form class="footer-newsletter">
+                        <input type="email" placeholder="Your email">
+                        <button type="submit">Subscribe</button>
+                    </form>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 NewsHub. All rights reserved.</p>
+                <p id="currentTime"></p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="index.js"></script>
+</body>
+</html>

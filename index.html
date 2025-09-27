@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NewsHub - Your Source for Breaking News</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <h1><i class="fas fa-newspaper"></i> NewsHub</h1>
+                </div>
+                <nav class="nav">
+                    <ul class="nav-list">
+                        <li><a href="index.html" class="nav-link active">Home</a></li>
+                        <li><a href="category.html?cat=sports" class="nav-link">Sports</a></li>
+                        <li><a href="category.html?cat=tech" class="nav-link">Tech</a></li>
+                        <li><a href="category.html?cat=politics" class="nav-link">Politics</a></li>
+                        <li><a href="category.html?cat=entertainment" class="nav-link">Entertainment</a></li>
+                        <li><a href="category.html?cat=business" class="nav-link">Business</a></li>
+                    </ul>
+                </nav>
+                <div class="header-actions">
+                    <div class="search-container">
+                        <input type="text" id="searchInput" placeholder="Search news..." class="search-input">
+                        <button class="search-btn"><i class="fas fa-search"></i></button>
+                    </div>
+                    <button class="theme-toggle" id="themeToggle">
+                        <i class="fas fa-moon"></i>
+                    </button>
+                    <button class="login-btn" id="loginBtn">Login</button>
+                </div>
+                <button class="mobile-menu-toggle" id="mobileMenuToggle">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Breaking News Banner -->
+    <div class="breaking-news" id="breakingNews">
+        <div class="container">
+            <div class="breaking-content">
+                <span class="breaking-label">BREAKING</span>
+                <div class="breaking-ticker" id="breakingTicker">
+                    <span>Major breakthrough in renewable energy technology announced today...</span>
+                    <span>Stock markets reach new all-time highs amid economic optimism...</span>
+                    <span>International space mission successfully launches from Cape Canaveral...</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <main class="main">
+        <div class="container">
+            <!-- Featured Article Section -->
+            <section class="featured-section">
+                <h2 class="section-title">Featured Story</h2>
+                <article class="featured-article">
+                    <div class="featured-image">
+                        <img src="https://images.unsplash.com/photo-1504711434969-e33886168f5c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" alt="Featured News">
+                        <div class="featured-badge">Featured</div>
+                    </div>
+                    <div class="featured-content">
+                        <div class="article-meta">
+                            <span class="category">Technology</span>
+                            <span class="date" id="currentDate"></span>
+                        </div>
+                        <h3 class="featured-title">Revolutionary AI Technology Transforms Healthcare Industry</h3>
+                        <p class="featured-excerpt">A groundbreaking artificial intelligence system has been developed that can diagnose diseases with 99% accuracy, potentially revolutionizing patient care and medical research worldwide.</p>
+                        <a href="article.html?id=1" class="read-more-btn">Read Full Story <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </article>
+            </section>
+
+            <!-- News Grid Section -->
+            <section class="news-section">
+                <div class="section-header">
+                    <h2 class="section-title">Latest News</h2>
+                    <div class="filter-tabs">
+                        <button class="filter-tab active" data-category="all">All</button>
+                        <button class="filter-tab" data-category="sports">Sports</button>
+                        <button class="filter-tab" data-category="tech">Tech</button>
+                        <button class="filter-tab" data-category="politics">Politics</button>
+                        <button class="filter-tab" data-category="entertainment">Entertainment</button>
+                    </div>
+                </div>
+                <div class="news-grid" id="newsGrid">
+                    <!-- News cards will be dynamically generated -->
+                </div>
+                <button class="load-more-btn" id="loadMoreBtn">Load More News</button>
+            </section>
+        </div>
+    </main>
+
+    <!-- Newsletter Popup -->
+    <div class="newsletter-popup" id="newsletterPopup">
+        <div class="popup-content">
+            <button class="popup-close" id="popupClose">&times;</button>
+            <div class="popup-header">
+                <h3>Stay Updated</h3>
+                <p>Get the latest news delivered to your inbox</p>
+            </div>
+            <form class="newsletter-form" id="newsletterForm">
+                <input type="email" placeholder="Enter your email" required>
+                <button type="submit">Subscribe</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Login Modal -->
+    <div class="modal" id="loginModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>Login to NewsHub</h3>
+                <button class="modal-close" id="modalClose">&times;</button>
+            </div>
+            <form class="login-form" id="loginForm">
+                <div class="form-group">
+                    <input type="email" placeholder="Email" required>
+                </div>
+                <div class="form-group">
+                    <input type="password" placeholder="Password" required>
+                </div>
+                <button type="submit" class="login-submit-btn">Login</button>
+                <p class="signup-link">Don't have an account? <a href="#" id="showSignup">Sign up</a></p>
+            </form>
+        </div>
+    </div>
+
+    <!-- Signup Modal -->
+    <div class="modal" id="signupModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>Sign up for NewsHub</h3>
+                <button class="modal-close" id="signupModalClose">&times;</button>
+            </div>
+            <form class="signup-form" id="signupForm">
+                <div class="form-group">
+                    <input type="text" placeholder="Full Name" required>
+                </div>
+                <div class="form-group">
+                    <input type="email" placeholder="Email" required>
+                </div>
+                <div class="form-group">
+                    <input type="password" placeholder="Password" required>
+                </div>
+                <button type="submit" class="signup-submit-btn">Sign Up</button>
+                <p class="login-link">Already have an account? <a href="#" id="showLogin">Login</a></p>
+            </form>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>NewsHub</h4>
+                    <p>Your trusted source for breaking news through Bria and in-depth analysis.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>Categories</h4>
+                    <ul>
+                        <li><a href="category.html?cat=sports">Sports</a></li>
+                        <li><a href="category.html?cat=tech">Technology</a></li>
+                        <li><a href="category.html?cat=politics">Politics</a></li>
+                        <li><a href="category.html?cat=entertainment">Entertainment</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Company</h4>
+                    <ul>
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">Contact</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms of Service</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Newsletter</h4>
+                    <p>Subscribe to get daily news updates</p>
+                    <form class="footer-newsletter">
+                        <input type="email" placeholder="Your email">
+                        <button type="submit">Subscribe</button>
+                    </form>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 NewsHub. All rights reserved.</p>
+                <p id="currentTime"></p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="index.js"></script>
+</body>
+</html>
